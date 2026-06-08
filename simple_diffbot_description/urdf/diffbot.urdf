@@ -95,5 +95,28 @@
     <axis xyz="0 1 0"/>
 
   </joint>
+<link name="caster">
 
+  <visual>
+    <geometry>
+      <sphere radius="0.025"/>
+    </geometry>
+  </visual>
+
+  <collision>
+    <geometry>
+      <sphere radius="0.025"/>
+    </geometry>
+  </collision>
+
+</link>
+
+<joint name="caster_joint" type="fixed">
+
+  <parent link="base_link"/>
+  <child link="caster"/>
+
+  <origin xyz="-0.12 0 -0.03"/>
+
+</joint>
 </robot>
